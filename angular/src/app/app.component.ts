@@ -27,7 +27,7 @@ export class AppComponent {
     handleSubmit = function(e) {
         setTimeout(() => { 
             alert("Submitted");          
-        }, 3000);
+        }, 1000);
         
         e.preventDefault();
     }

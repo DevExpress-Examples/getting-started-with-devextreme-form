@@ -8,28 +8,24 @@
             [showColonAfterLabel]="false">
             <dxi-item 
                 itemType="group" 
-                caption="Profile"
                 [colCount]="2">
                 <dxi-item 
                     itemType="group" 
                     caption="Employee">
                     <dxi-item dataField="name" [isRequired]="true"></dxi-item>
-                    <dxi-item dataField="notes"></dxi-item>
+                    <dxi-item dataField="position"></dxi-item>
+                    <dxi-item dataField="hireDate"></dxi-item>
+                    <dxi-item dataField="officeNumber">
+                        <dxi-validation-rule
+                            type="numeric"
+                            message="This field should contain a number">
+                        </dxi-validation-rule>
+                    </dxi-item>
                 </dxi-item>
                 <dxi-item itemType="group" caption="Personal Information">
                     <dxi-item itemType="tabbed">
-                        <dxo-tab-panel-options [height]="320">
+                        <dxo-tab-panel-options [height]="320" [elementAttr]="{ id: 'tabbedItem' }">
                         </dxo-tab-panel-options>
-                        <dxi-tab title="Profile">
-                            <dxi-item dataField="position"></dxi-item>
-                            <dxi-item dataField="hireDate"></dxi-item>
-                            <dxi-item dataField="officeNumber">
-                                <dxi-validation-rule
-                                type="numeric"
-                                message="This field should contain a number">
-                                </dxi-validation-rule>
-                            </dxi-item>
-                        </dxi-tab>
                         <dxi-tab title="Contacts">
                             <dxi-item dataField="skype"></dxi-item>
                             <dxi-item dataField="phone"></dxi-item>
@@ -38,6 +34,12 @@
                                     type="email"
                                     message="This is not a valid Email">
                                 </dxi-validation-rule>
+                            </dxi-item>
+                        </dxi-tab>
+                        <dxi-tab title="Note">
+                            <dxi-item 
+                                dataField="notes"
+                                editorType="dxTextArea">
                             </dxi-item>
                         </dxi-tab>
                     </dxi-item>

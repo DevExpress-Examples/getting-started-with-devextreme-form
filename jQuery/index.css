@@ -1,5 +1,5 @@
 #form {
-    height: 38em;
+    height: 35em;
     margin: 20px 0 0 20px;
     padding: 10px;
     border: 1px solid;
@@ -12,8 +12,4 @@
 #app-container {
     width: 900px;
     position: relative;
-}
-
-::ng-deep #tabbedItem {
-    margin-top: 18px;
 }
