@@ -53,7 +53,7 @@
     <DxCheckBox
       id="check-box"
       text="Enable read-only mode"
-      v-model="isFormReadOnly"
+      v-model:value="isFormReadOnly"
     />
   </div>
 </template>
