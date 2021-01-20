@@ -8,9 +8,8 @@
         label-location="top"
         :show-colon-after-label="false">
         <DxGroupItem
-            caption="Personal Information"
-            :col-count="2">
-            <DxGroupItem caption="employee">
+          :col-count="2">
+            <DxGroupItem caption="Employee">
               <DxSimpleItem data-field="name" :is-required="true"/>
               <DxSimpleItem data-field="position"/>
               <DxSimpleItem data-field="hireDate"/>
@@ -75,6 +74,8 @@ import {
 } from 'devextreme-vue/form';
 
 import { DxCheckBox } from 'devextreme-vue/check-box';
+import { DxTextArea } from 'devextreme-vue/text-area'; // eslint-disable-line vue/no-unused-components
+
 
 const employee = {
     name: 'John Heart',
@@ -106,7 +107,8 @@ export default {
         DxTabPanelOptions,
         DxNumericRule, 
         DxEmailRule,
-        DxCheckBox
+        DxCheckBox,
+        DxTextArea // eslint-disable-line vue/no-unused-components
     },
     data() {
         return {
@@ -129,7 +131,7 @@ export default {
 
 <style scoped>
 #form {
-  height: 38em;
+  height: 35em;
   margin: 20px 0 0 20px;
   padding: 10px;
   border: 1px solid;

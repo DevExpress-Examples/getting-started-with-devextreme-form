@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 
-import { DxFormModule, DxCheckBoxModule } from 'devextreme-angular';
+import { DxFormModule, DxCheckBoxModule, DxTextAreaModule } from 'devextreme-angular';
 
 @NgModule({
     declarations: [
@@ -11,7 +11,8 @@ import { DxFormModule, DxCheckBoxModule } from 'devextreme-angular';
     imports: [
         BrowserModule,
         DxFormModule,
-        DxCheckBoxModule
+        DxCheckBoxModule,
+        DxTextAreaModule
     ],
     providers: [ ],
     bootstrap: [AppComponent]
