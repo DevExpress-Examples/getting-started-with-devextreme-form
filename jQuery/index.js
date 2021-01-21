@@ -10,7 +10,7 @@ $(function() {
         notes: 'John has been in the Audio/Video industry since 1990.'
     };
 
-    let form = $("#form").dxForm({
+    const form = $("#form").dxForm({
         id: "form",
         formData: employee,
         labelLocation: "top",

@@ -42,10 +42,13 @@
               </DxTabbedItem>
             </DxGroupItem>
         </DxGroupItem>
-        <DxButtonItem 
-          :button-options="submitButtonOptions"
-          horizontal-alignment="center"
-        />
+        <DxButtonItem
+          horizontal-alignment="center">
+          <DxButtonOptions 
+            text="Submit the Form"
+            :use-submit-behavior="true"
+          />
+        </DxButtonItem>
       </DxForm>
     </form>
 
@@ -66,6 +69,7 @@ import {
     DxSimpleItem, 
     DxGroupItem,
     DxButtonItem,
+    DxButtonOptions,
     DxTabbedItem,
     DxTab,
     DxTabPanelOptions,
@@ -74,7 +78,7 @@ import {
 } from 'devextreme-vue/form';
 
 import { DxCheckBox } from 'devextreme-vue/check-box';
-import { DxTextArea } from 'devextreme-vue/text-area'; // eslint-disable-line vue/no-unused-components
+import 'devextreme-vue/text-area'; 
 
 
 const employee = {
@@ -88,11 +92,6 @@ const employee = {
     notes: 'John has been in the Audio/Video industry since 1990.'
 };
 
-const submitButtonOptions = {
-    text: "Submit the Form",
-    useSubmitBehavior: true
-};
-
 let isFormReadOnly = false;
 
 export default {
@@ -102,18 +101,17 @@ export default {
         DxSimpleItem,
         DxGroupItem,
         DxButtonItem,
+        DxButtonOptions,
         DxTabbedItem,
         DxTab,
         DxTabPanelOptions,
         DxNumericRule, 
         DxEmailRule,
-        DxCheckBox,
-        DxTextArea // eslint-disable-line vue/no-unused-components
+        DxCheckBox
     },
     data() {
         return {
           employee,
-          submitButtonOptions,
           isFormReadOnly
         }
     },

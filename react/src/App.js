@@ -11,11 +11,12 @@ import Form, {
   Tab,
   TabPanelOptions,
   NumericRule, 
-  EmailRule
+  EmailRule,
+  ButtonOptions
 } from 'devextreme-react/form';
 
 import { CheckBox } from 'devextreme-react/check-box';
-import { TextArea } from 'devextreme-react/text-area';
+import 'devextreme-react/text-area';
 
 const employee = {
   name: 'John Heart',
@@ -26,11 +27,6 @@ const employee = {
   skype: 'jheart_DX_skype',
   email: 'jheart@dx-email.com',
   notes: 'John has been in the Audio/Video industry since 1990.'
-};
-
-const submitButtonOptions = {
-  text: "Submit the Form",
-  useSubmitBehavior: true
 };
 
 const tabPanelProperties = {
@@ -97,9 +93,12 @@ const App = () => {
             </GroupItem>
           </GroupItem>
           <ButtonItem 
-            buttonOptions={submitButtonOptions}
-            horizontalAlignment="center"
-          />
+            horizontalAlignment="center">
+            <ButtonOptions 
+              text="Submit the Form"
+              useSubmitBehavior={true}
+            />
+          </ButtonItem>
         </Form>
       </form>
 
