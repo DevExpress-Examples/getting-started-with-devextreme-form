@@ -1,4 +1,6 @@
-# Angular
+# Getting Started with DevExtreme Angular Form
+
+This repository stores Angular source code for the [Getting Started with Form](https://js.devexpress.com/Documentation/Guide/UI_Components/Form/Getting_Started_with_Form/) tutorial.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.0.
 

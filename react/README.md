@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# Getting Started with DevExtreme React Form
+
+This repository stores React source code for the [Getting Started with Form](https://js.devexpress.com/Documentation/Guide/UI_Components/Form/Getting_Started_with_Form/) tutorial.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
