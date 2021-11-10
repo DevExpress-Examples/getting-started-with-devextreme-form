@@ -29,10 +29,6 @@ const employee = {
   notes: 'John has been in the Audio/Video industry since 1990.'
 };
 
-const tabPanelProperties = {
-  id: 'tabbedItem'
-}
-
 const App = () => {
   const handleSubmit = React.useCallback((e) => {
       setTimeout(() => { 
@@ -72,7 +68,7 @@ const App = () => {
             <GroupItem caption="Personal Information">
               <TabbedItem>
                 <TabPanelOptions
-                  height={320} elementAttr={tabPanelProperties}
+                  height={260}
                 />
                 <Tab title="Contacts">
                   <SimpleItem dataField="phone" />

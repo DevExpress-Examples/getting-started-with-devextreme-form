@@ -22,7 +22,7 @@
             <DxGroupItem caption="Personal Information">
               <DxTabbedItem>
                 <DxTabPanelOptions
-                  :height="320" :element-attr="{ id: 'tabbedItem' }"
+                  :height="260"
                 />
                 <DxTab title="Contacts">
                   <DxSimpleItem data-field="phone"/>
@@ -129,22 +129,16 @@ export default {
 
 <style scoped>
 #form {
-  height: 35em;
-  margin: 20px 0 0 20px;
-  padding: 10px;
-  border: 1px solid;
+    padding: 10px;
+    border: 1px solid;
 }
 
 #check-box {
-  margin: 20px;
+    margin-top: 10px;
 }
 
 #app-container {
-  width: 900px;
-  position: relative;
-}
-
-#tabbedItem {
-  margin-top: 18px;
+    width: 900px;
+    position: relative;
 }
 </style>

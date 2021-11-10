@@ -14,7 +14,7 @@ $(function() {
         id: "form",
         formData: employee,
         labelLocation: "top",
-        showColonAfterLabel: "false",
+        showColonAfterLabel: false,
         items: [{
             itemType: "group",
             colCount: 2,
@@ -37,7 +37,7 @@ $(function() {
                 items: [{
                     itemType: "tabbed",
                     tabPanelOptions: {
-                        height: 320
+                        height: 260
                     },
                     tabs: [{
                         title: "Contacts",
