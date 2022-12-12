@@ -1,6 +1,8 @@
-# Getting Started with DevExtreme jQuery Form
+# DevExtreme jQuery Form - Getting Started 
 
-This repository stores jQuery source code for the [Getting Started with Form](https://js.devexpress.com/Documentation/Guide/UI_Components/Form/Getting_Started_with_Form/) tutorial.
+This repository stores the code examples of the jQuery Form component for the [Getting Started with Form](https://js.devexpress.com/Documentation/Guide/UI_Components/Form/Getting_Started_with_Form/) tutorial. The component allows users to create a data entry UI for the underlying data object. The Form interface consists of automatically-arranged label-editor pairs that correspond to data fields. 
+
+Users can change data values, validate inputs, and send the resulting data to the server. This tutorial shows how to add the Form to a page, bind it to data, and configure its core features.
 
 ## Installation
 
@@ -21,6 +23,6 @@ http://localhost:3000/src/index.html
 
 You can learn more about jQuery API in the [jQuery documentation](https://api.jquery.com/).
 
-To get more help on DevExtreme submit an issue on [GitHub](https://github.com/DevExpress/devextreme/issues) or [Support Center](https://www.devexpress.com/Support/Center/Question/Create)
+To get more help on DevExtreme, submit an issue on [GitHub](https://github.com/DevExpress/devextreme/issues) or [Support Center](https://www.devexpress.com/Support/Center/Question/Create)
 
 

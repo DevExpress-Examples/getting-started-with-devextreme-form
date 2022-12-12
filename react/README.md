@@ -1,6 +1,8 @@
-# Getting Started with DevExtreme React Form
+# DevExtreme React Form - Getting Started 
 
-This repository stores React source code for the [Getting Started with Form](https://js.devexpress.com/Documentation/Guide/UI_Components/Form/Getting_Started_with_Form/) tutorial.
+This repository stores the code examples of the React Form component for the [Getting Started with Form](https://js.devexpress.com/Documentation/Guide/UI_Components/Form/Getting_Started_with_Form/) tutorial. The component allows users to create a data entry UI for the underlying data object. The Form interface consists of automatically-arranged label-editor pairs that correspond to data fields. 
+
+Users can change data values, validate inputs, and send the resulting data to the server. This tutorial shows how to add the Form to a page, bind it to data, and configure its core features.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
