@@ -3,7 +3,7 @@
 [![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/T960431)
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
-# Form for DevExtreme - Getting Started 
+# DevExtreme Form - Getting Started 
 
 This repository stores the code examples of the Form component for the [Getting Started with Form](https://js.devexpress.com/Documentation/Guide/UI_Components/Form/Getting_Started_with_Form/) tutorial. The component allows users to create a data entry UI for the underlying data object. The Form interface consists of automatically-arranged label-editor pairs that correspond to data fields. 
 
