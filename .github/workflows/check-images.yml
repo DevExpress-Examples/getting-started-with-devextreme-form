@@ -28,15 +28,14 @@ jobs:
             images+=" $(find ./images -type f \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.svg" -o -iname "*.gif" \) -printf "%P\n")"
           fi
 
-          # Loop through each image to check if it's referenced in any README files
+          # Loop through each image to check if it's referenced in the root README.md file
           for img in $images; do
             found=false
-            while IFS= read -r -d '' readme_file; do
-              if grep -q "!\[.*\](.*$img.*)" "$readme_file"; then
+            if [ -f "./README.md" ]; then
+              if grep -q "$img" "./README.md"; then
                 found=true
-                break
               fi
-            done < <(find . -iname "readme.md" -print0)
+            fi
             
             if [ "$found" = false ]; then
               unused+=("$img")
@@ -45,7 +44,7 @@ jobs:
 
           # Check if there are any unused images
           if [ ${#unused[@]} -gt 0 ]; then
-            echo "❌ Unused images found that are not referenced in any README files:"
+            echo "❌ Unused images found that are not referenced in the root README.md file:"
             echo "## Unused Images" >> $GITHUB_STEP_SUMMARY
             echo "" >> $GITHUB_STEP_SUMMARY
             echo "| Image Name | Path |" >> $GITHUB_STEP_SUMMARY
@@ -65,5 +64,5 @@ jobs:
 
             exit 1
           else
-            echo "✅ No unused images found that are not referenced in README files!"
+            echo "✅ No unused images found that are not referenced in the root README.md file!"
           fi

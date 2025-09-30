@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { ClickEvent } from 'devextreme/ui/button';
+import notify from 'devextreme/ui/notify';
+import { Employee, SubmitButtonOptions } from './app.types';
 
 @Component({
   selector: 'app-root',
@@ -7,14 +8,29 @@ import { ClickEvent } from 'devextreme/ui/button';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'Angular';
+  employee: Employee = {
+    name: 'John Heart',
+    position: 'CEO',
+    hireDate: new Date(2012, 4, 13),
+    officeNumber: 901,
+    phone: '+1(213) 555-9392',
+    skype: 'jheart_DX_skype',
+    email: 'jheart@dx-email.com',
+    notes: 'John has been in the Audio/Video industry since 1990.',
+  };
 
-  counter = 0;
+  isFormReadOnly = false;
 
-  buttonText = 'Click count: 0';
+  submitButtonOptions: SubmitButtonOptions = {
+    text: 'Submit the Form',
+    useSubmitBehavior: true,
+  };
 
-  onClick(e: ClickEvent): void {
-    this.counter++;
-    this.buttonText = `Click count: ${this.counter}`;
+  handleSubmit(e: Event): void {
+    setTimeout(() => {
+      notify('Submitted', 'success', 2000);
+    }, 1000);
+
+    e.preventDefault();
   }
 }

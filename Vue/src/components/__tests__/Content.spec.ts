@@ -1,11 +1,11 @@
 import { describe, it, expect } from 'vitest';
 
 import { mount } from '@vue/test-utils';
-import Content from '../HomeContent.vue';
+import FormContent from '../FormContent.vue';
 
-describe('Content', () => {
+describe('FormContent', () => {
   it('renders properly', () => {
-    const wrapper = mount(Content, { props: { text: 'count' } });
-    expect(wrapper.text()).toContain('count');
+    const wrapper = mount(FormContent);
+    expect(wrapper.find('#form').exists()).toBe(true);
   });
 });
