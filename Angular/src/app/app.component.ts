@@ -3,10 +3,11 @@ import notify from 'devextreme/ui/notify';
 import { Employee, SubmitButtonOptions } from './app.types';
 
 import { DxFormModule } from 'devextreme-angular/ui/form';
+import { DxCheckBoxModule } from 'devextreme-angular/ui/check-box';
 
 @Component({
     selector: 'app-root',
-    imports: [DxFormModule],
+    imports: [DxFormModule, DxCheckBoxModule],
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss'],
 })
