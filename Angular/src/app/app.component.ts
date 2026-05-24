@@ -2,11 +2,13 @@ import { Component } from '@angular/core';
 import notify from 'devextreme/ui/notify';
 import { Employee, SubmitButtonOptions } from './app.types';
 
+import { DxFormModule } from 'devextreme-angular/ui/form';
+
 @Component({
     selector: 'app-root',
+    imports: [DxFormModule],
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss'],
-    standalone: false
 })
 export class AppComponent {
   employee: Employee = {
