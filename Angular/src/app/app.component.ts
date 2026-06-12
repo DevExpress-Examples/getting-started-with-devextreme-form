@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import notify from 'devextreme/ui/notify';
 import { Employee, SubmitButtonOptions } from './app.types';
 
@@ -9,6 +9,7 @@ import { DxCheckBoxModule } from 'devextreme-angular/ui/check-box';
     selector: 'app-root',
     imports: [DxFormModule, DxCheckBoxModule],
     templateUrl: './app.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
