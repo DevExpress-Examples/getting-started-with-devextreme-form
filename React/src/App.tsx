@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from 'react';
 import './App.css';
-import 'devextreme/dist/css/dx.material.blue.light.compact.css';
+import 'devextreme/dist/css/dx.fluent.blue.light.css';
 import Form, {
   SimpleItem,
   GroupItem,
@@ -67,7 +67,7 @@ function App(): JSX.Element {
             </GroupItem>
             <GroupItem caption="Personal Information">
               <TabbedItem>
-                <TabPanelOptions height={260} />
+                <TabPanelOptions height={280} />
                 <Tab title="Contacts">
                   <SimpleItem dataField="phone" />
                   <SimpleItem dataField="skype" />

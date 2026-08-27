@@ -25,7 +25,7 @@
           </DxGroupItem>
           <DxGroupItem caption="Personal Information">
             <DxTabbedItem>
-              <DxTabPanelOptions :height="260"/>
+              <DxTabPanelOptions :height="280"/>
               <DxTab title="Contacts">
                 <DxSimpleItem data-field="phone"/>
                 <DxSimpleItem data-field="skype"/>
@@ -103,15 +103,11 @@ const handleSubmit = (e: Event): void => {
 <style scoped>
 #form {
   padding: 10px;
-  border: 1px solid;
+  border: var(--dx-border-width) solid var(--dx-color-border);
+  border-radius: var(--dx-border-radius);
 }
 
 #check-box {
   margin-top: 10px;
-}
-
-#app-container {
-  width: 900px;
-  position: relative;
 }
 </style>
