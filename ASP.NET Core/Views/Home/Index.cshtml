@@ -1,0 +1,85 @@
+@using DevExtreme.AspNet.Mvc.Factories
+@model object
+
+<form action="/employee-page" id="form-container">
+    @(Html.DevExtreme().Form()
+        .ID("form")
+        .FormData(Model)
+        .LabelLocation(FormLabelLocation.Top)
+        .ShowColonAfterLabel(false)
+        .Items(FormItems => {
+            FormItems.AddGroup().ColCount(2).Items(MainGroupItems => {
+                MainGroupItems.AddGroup().Caption("Personal Information").Items(PersonalInfoItems);
+                MainGroupItems.AddGroup().Caption("Contact & Miscellaneous Info").Items(ContactAndMiscItems);
+            });
+            FormItems.AddButton().HorizontalAlignment(HorizontalAlignment.Center).ButtonOptions(Button => 
+                Button.Text("Submit the Form").UseSubmitBehavior(true)
+            );
+        })
+    )
+</form>
+
+@functions {
+    void PersonalInfoItems(FormItemsFactory<object> Items) {
+        Items.AddSimple().DataField("Name").IsRequired(true);
+        Items.AddSimple().DataField("Position");
+        Items.AddSimple().DataField("HireDate");
+        Items.AddSimple().DataField("OfficeNumber").ValidationRules(Rules => 
+            Rules.AddNumeric().Message("This field should contain a number")
+        );
+    }
+
+    void ContactAndMiscItems(FormItemsFactory<object> Items) {
+        Items.AddTabbed().TabPanelOptions(Options => 
+            Options.Height(280)
+        ).Tabs(Tabs => {
+            Tabs.Add().Title("Contacts").Items(ContactsItems => {
+                ContactsItems.AddSimple().DataField("Skype");
+                ContactsItems.AddSimple().DataField("Phone");
+                ContactsItems.AddSimple().DataField("Email").ValidationRules(Rules => 
+                    Rules.AddEmail().Message("This is not a valid Email")
+                );
+            });
+            Tabs.Add().Title("Note").Items(NoteItems => 
+                NoteItems.AddSimple().DataField("Notes").Editor(Editor => Editor.TextArea())
+            );
+        });
+    }
+}
+
+@(Html.DevExtreme().CheckBox()
+    .ID("check-box")
+    .Text("Enable read-only mode")
+    .OnValueChanged("handleCheckBoxValueChanged")
+)
+
+<script>
+    function handleCheckBoxValueChanged(e) {
+        $('#form').dxForm('instance').option('readOnly', e.value);
+    }
+
+    $('#form-container').on('submit', (e) => {
+        setTimeout(() => {
+            DevExpress.ui.notify('Submitted', 'success', 2000);
+        }, 1000);
+
+        e.preventDefault();
+    });
+</script>
+
+<style>
+    #form {
+        padding: 10px;
+        border: var(--dx-border-width) solid var(--dx-color-border);
+        border-radius: var(--dx-border-radius);
+    }
+
+    #check-box {
+        margin-top: 10px;
+    }
+
+    #app-container {
+        width: 900px;
+        position: relative;
+    }
+</style>
