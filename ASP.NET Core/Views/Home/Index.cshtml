@@ -9,8 +9,8 @@
         .ShowColonAfterLabel(false)
         .Items(FormItems => {
             FormItems.AddGroup().ColCount(2).Items(MainGroupItems => {
-                MainGroupItems.AddGroup().Caption("Personal Information").Items(PersonalInfoItems);
-                MainGroupItems.AddGroup().Caption("Contact & Miscellaneous Info").Items(ContactAndMiscItems);
+                MainGroupItems.AddGroup().Caption("Employee").Items(PersonalInfoItems);
+                MainGroupItems.AddGroup().Caption("Personal Information").Items(ContactAndMiscItems);
             });
             FormItems.AddButton().HorizontalAlignment(HorizontalAlignment.Center).ButtonOptions(Button => 
                 Button.Text("Submit the Form").UseSubmitBehavior(true)
