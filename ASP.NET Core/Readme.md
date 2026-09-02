@@ -4,7 +4,7 @@ For more information about this example check the [Readme](../README.md).
 
 ## Build and Run
 
-Prerequisites: .NET 8 SDK, Node.js (for npm/gulp resource bundling).
+Prerequisites: .NET 8 SDK and Node.js (for npm resource bundling).
 
 Restore and build:
 ```sh
@@ -12,7 +12,7 @@ dotnet restore
 dotnet build
 ```
 
-Run (HTTPS on 5001, HTTP on 5000 by default):
+Run (HTTP, port 5000):
 ```sh
 dotnet run
 ```
