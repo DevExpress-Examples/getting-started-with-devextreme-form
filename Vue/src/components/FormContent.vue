@@ -74,8 +74,8 @@ import {
   DxEmailRule,
 } from 'devextreme-vue/form';
 import { DxCheckBox } from 'devextreme-vue/check-box';
-import 'devextreme-vue/text-area';
 import notify from 'devextreme/ui/notify';
+import 'devextreme/ui/text_area';
 import type { Employee } from '../types';
 
 const employee: Employee = {

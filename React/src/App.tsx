@@ -14,8 +14,8 @@ import Form, {
 } from 'devextreme-react/form';
 import CheckBox from 'devextreme-react/check-box';
 import type { CheckBoxTypes } from 'devextreme-react/check-box';
-import 'devextreme-react/text-area';
 import notify from 'devextreme/ui/notify';
+import 'devextreme/ui/text_area';
 import type { Employee } from './types';
 
 const employee: Employee = {

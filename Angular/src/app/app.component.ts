@@ -2,11 +2,12 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
 import notify from 'devextreme/ui/notify';
 import { Employee, SubmitButtonOptions } from './app.types';
 
-import { DxFormModule, DxCheckBoxModule, DxTextAreaModule } from 'devextreme-angular';
+import { DxFormModule, DxCheckBoxModule } from 'devextreme-angular';
+import 'devextreme/ui/text_area';
 
 @Component({
     selector: 'app-root',
-    imports: [DxFormModule, DxCheckBoxModule, DxTextAreaModule],
+    imports: [DxFormModule, DxCheckBoxModule],
     templateUrl: './app.component.html',
     changeDetection: ChangeDetectionStrategy.Eager,
     styleUrls: ['./app.component.scss'],
