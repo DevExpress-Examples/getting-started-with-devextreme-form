@@ -48,7 +48,7 @@ function App(): JSX.Element {
   );
 
   return (
-    <div id="app-container">
+    <React.Fragment>
       <form action="/employee-page" onSubmit={handleSubmit}>
         <Form
           id="form"
@@ -85,15 +85,14 @@ function App(): JSX.Element {
             <ButtonOptions text="Submit the Form" useSubmitBehavior={true} />
           </ButtonItem>
         </Form>
-
-        <CheckBox
-          id="check-box"
-          text="Enable read-only mode"
-          value={isFormReadOnly}
-          onValueChanged={onCheckBoxValueChanged}
-        />
       </form>
-    </div>
+      <CheckBox
+        id="check-box"
+        text="Enable read-only mode"
+        value={isFormReadOnly}
+        onValueChanged={onCheckBoxValueChanged}
+      />
+    </React.Fragment>
   );
 }
 

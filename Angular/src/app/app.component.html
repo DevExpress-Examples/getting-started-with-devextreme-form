@@ -1,60 +1,57 @@
-<div id="app-container">
-  <form action="/employee-page" (submit)="handleSubmit($event)">
-    <dx-form
-      id="form"
-      [formData]="employee"
-      [readOnly]="isFormReadOnly"
-      labelLocation="top"
-      [showColonAfterLabel]="false"
-    >
-      <dxi-form-item itemType="group" [colCount]="2">
-        <dxi-form-item itemType="group" caption="Employee">
-          <dxi-form-item dataField="name" [isRequired]="true"></dxi-form-item>
-          <dxi-form-item dataField="position"></dxi-form-item>
-          <dxi-form-item dataField="hireDate"></dxi-form-item>
-          <dxi-form-item dataField="officeNumber">
-            <dxi-form-validation-rule
-              type="numeric"
-              message="This field should contain a number"
-            >
-            </dxi-form-validation-rule>
-          </dxi-form-item>
-        </dxi-form-item>
-        <dxi-form-item itemType="group" caption="Personal Information">
-          <dxi-form-item itemType="tabbed">
-            <dxo-form-tab-panel-options [height]="280">
-            </dxo-form-tab-panel-options>
-            <dxi-form-tab title="Contacts">
-              <dxi-form-item dataField="skype"></dxi-form-item>
-              <dxi-form-item dataField="phone"></dxi-form-item>
-              <dxi-form-item dataField="email">
-                <dxi-form-validation-rule
-                  type="email"
-                  message="This is not a valid Email"
-                >
-                </dxi-form-validation-rule>
-              </dxi-form-item>
-            </dxi-form-tab>
-            <dxi-form-tab title="Note">
-              <dxi-form-item dataField="notes" editorType="dxTextArea">
-              </dxi-form-item>
-            </dxi-form-tab>
-          </dxi-form-item>
+<form action="/employee-page" (submit)="handleSubmit($event)">
+  <dx-form
+    id="form"
+    [formData]="employee"
+    [readOnly]="isFormReadOnly"
+    labelLocation="top"
+    [showColonAfterLabel]="false"
+  >
+    <dxi-form-item itemType="group" [colCount]="2">
+      <dxi-form-item itemType="group" caption="Employee">
+        <dxi-form-item dataField="name" [isRequired]="true"></dxi-form-item>
+        <dxi-form-item dataField="position"></dxi-form-item>
+        <dxi-form-item dataField="hireDate"></dxi-form-item>
+        <dxi-form-item dataField="officeNumber">
+          <dxi-form-validation-rule
+            type="numeric"
+            message="This field should contain a number"
+          >
+          </dxi-form-validation-rule>
         </dxi-form-item>
       </dxi-form-item>
-      <dxi-form-item
-        itemType="button"
-        horizontalAlignment="center"
-        [buttonOptions]="submitButtonOptions"
-      >
+      <dxi-form-item itemType="group" caption="Personal Information">
+        <dxi-form-item itemType="tabbed">
+          <dxo-form-tab-panel-options [height]="280">
+          </dxo-form-tab-panel-options>
+          <dxi-form-tab title="Contacts">
+            <dxi-form-item dataField="skype"></dxi-form-item>
+            <dxi-form-item dataField="phone"></dxi-form-item>
+            <dxi-form-item dataField="email">
+              <dxi-form-validation-rule
+                type="email"
+                message="This is not a valid Email"
+              >
+              </dxi-form-validation-rule>
+            </dxi-form-item>
+          </dxi-form-tab>
+          <dxi-form-tab title="Note">
+            <dxi-form-item dataField="notes" editorType="dxTextArea">
+            </dxi-form-item>
+          </dxi-form-tab>
+        </dxi-form-item>
       </dxi-form-item>
-    </dx-form>
-
-    <dx-check-box
-      id="check-box"
-      text="Enable read-only mode"
-      [(value)]="isFormReadOnly"
+    </dxi-form-item>
+    <dxi-form-item
+      itemType="button"
+      horizontalAlignment="center"
+      [buttonOptions]="submitButtonOptions"
     >
-    </dx-check-box>
-  </form>
-</div>
+    </dxi-form-item>
+  </dx-form>
+</form>
+<dx-check-box
+  id="check-box"
+  text="Enable read-only mode"
+  [(value)]="isFormReadOnly"
+>
+</dx-check-box>

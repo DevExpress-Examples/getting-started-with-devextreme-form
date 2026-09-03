@@ -1,62 +1,59 @@
 <template>
-  <div id="app-container">
-    <form
-      action="/employee-page"
-      @submit="handleSubmit"
+  <form
+    action="/employee-page"
+    @submit="handleSubmit"
+  >
+    <DxForm
+      id="form"
+      v-model:form-data="employee"
+      :read-only="isFormReadOnly"
+      label-location="top"
+      :show-colon-after-label="false"
     >
-      <DxForm
-        id="form"
-        :form-data="employee"
-        :read-only="isFormReadOnly"
-        label-location="top"
-        :show-colon-after-label="false"
-      >
-        <DxGroupItem :col-count="2">
-          <DxGroupItem caption="Employee">
-            <DxSimpleItem
-              data-field="name"
-              :is-required="true"
-            />
-            <DxSimpleItem data-field="position"/>
-            <DxSimpleItem data-field="hireDate"/>
-            <DxSimpleItem data-field="officeNumber">
-              <DxNumericRule message="This field should contain a number"/>
-            </DxSimpleItem>
-          </DxGroupItem>
-          <DxGroupItem caption="Personal Information">
-            <DxTabbedItem>
-              <DxTabPanelOptions :height="280"/>
-              <DxTab title="Contacts">
-                <DxSimpleItem data-field="phone"/>
-                <DxSimpleItem data-field="skype"/>
-                <DxSimpleItem data-field="email">
-                  <DxEmailRule message="This is not a valid Email"/>
-                </DxSimpleItem>
-              </DxTab>
-              <DxTab title="Note">
-                <DxSimpleItem
-                  data-field="notes"
-                  editor-type="dxTextArea"
-                />
-              </DxTab>
-            </DxTabbedItem>
-          </DxGroupItem>
-        </DxGroupItem>
-        <DxButtonItem horizontal-alignment="center">
-          <DxButtonOptions
-            text="Submit the Form"
-            :use-submit-behavior="true"
+      <DxGroupItem :col-count="2">
+        <DxGroupItem caption="Employee">
+          <DxSimpleItem
+            data-field="name"
+            :is-required="true"
           />
-        </DxButtonItem>
-      </DxForm>
-
-      <DxCheckBox
-        id="check-box"
-        text="Enable read-only mode"
-        v-model:value="isFormReadOnly"
-      />
-    </form>
-  </div>
+          <DxSimpleItem data-field="position"/>
+          <DxSimpleItem data-field="hireDate"/>
+          <DxSimpleItem data-field="officeNumber">
+            <DxNumericRule message="This field should contain a number"/>
+          </DxSimpleItem>
+        </DxGroupItem>
+        <DxGroupItem caption="Personal Information">
+          <DxTabbedItem>
+            <DxTabPanelOptions :height="280"/>
+            <DxTab title="Contacts">
+              <DxSimpleItem data-field="phone"/>
+              <DxSimpleItem data-field="skype"/>
+              <DxSimpleItem data-field="email">
+                <DxEmailRule message="This is not a valid Email"/>
+              </DxSimpleItem>
+            </DxTab>
+            <DxTab title="Note">
+              <DxSimpleItem
+                data-field="notes"
+                editor-type="dxTextArea"
+              />
+            </DxTab>
+          </DxTabbedItem>
+        </DxGroupItem>
+      </DxGroupItem>
+      <DxButtonItem horizontal-alignment="center">
+        <DxButtonOptions
+          text="Submit the Form"
+          :use-submit-behavior="true"
+        />
+      </DxButtonItem>
+    </DxForm>
+  </form>
+  <DxCheckBox
+    id="check-box"
+    text="Enable read-only mode"
+    v-model:value="isFormReadOnly"
+  />
 </template>
 
 <script setup lang="ts">
