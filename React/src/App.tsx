@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from 'react';
 import './App.css';
-import 'devextreme/dist/css/dx.material.blue.light.compact.css';
+import 'devextreme/dist/css/dx.fluent.blue.light.css';
 import Form, {
   SimpleItem,
   GroupItem,
@@ -14,8 +14,8 @@ import Form, {
 } from 'devextreme-react/form';
 import CheckBox from 'devextreme-react/check-box';
 import type { CheckBoxTypes } from 'devextreme-react/check-box';
-import 'devextreme-react/text-area';
 import notify from 'devextreme/ui/notify';
+import 'devextreme/ui/text_area';
 import type { Employee } from './types';
 
 const employee: Employee = {
@@ -48,7 +48,7 @@ function App(): JSX.Element {
   );
 
   return (
-    <div id="app-container">
+    <React.Fragment>
       <form action="/employee-page" onSubmit={handleSubmit}>
         <Form
           id="form"
@@ -67,7 +67,7 @@ function App(): JSX.Element {
             </GroupItem>
             <GroupItem caption="Personal Information">
               <TabbedItem>
-                <TabPanelOptions height={260} />
+                <TabPanelOptions height={280} />
                 <Tab title="Contacts">
                   <SimpleItem dataField="phone" />
                   <SimpleItem dataField="skype" />
@@ -85,15 +85,14 @@ function App(): JSX.Element {
             <ButtonOptions text="Submit the Form" useSubmitBehavior={true} />
           </ButtonItem>
         </Form>
-
-        <CheckBox
-          id="check-box"
-          text="Enable read-only mode"
-          value={isFormReadOnly}
-          onValueChanged={onCheckBoxValueChanged}
-        />
       </form>
-    </div>
+      <CheckBox
+        id="check-box"
+        text="Enable read-only mode"
+        value={isFormReadOnly}
+        onValueChanged={onCheckBoxValueChanged}
+      />
+    </React.Fragment>
   );
 }
 
